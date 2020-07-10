@@ -1,28 +1,30 @@
 <template>
     <div class="hello">
-        <KForm :model="form" :rules="rules">
+        <!-- <KForm :model="form" :rules="rules">
             <KFormItem label="用户名">
-                <KInput v-model="form.name"></KInput>
-            </KFormItem>
-            <KFormItem label="密码">
-                <KInput :limit="2" type="number" v-model="form.password">
-                    
+                <KInput v-model="form.name">
+                      <template slot="prepend">元</template>
                 </KInput>
             </KFormItem>
-        </KForm>
+            <KFormItem label="金额"> -->
+                <KInput  :limit="4" type="number" v-model="form.password">
+                  
+                </KInput>
+            <!-- </KFormItem>
+        </KForm> -->
     </div>
 </template>
 
 <script>
     import KInput from "./KInput";
-    import KFormItem from "./KFormItem";
-    import KForm from "./KForm";
+    // import KFormItem from "./KFormItem";
+    // import KForm from "./KForm";
     export default {
         name: 'HelloWorld',
         components: {
             KInput,
-            KFormItem,
-            KForm
+            // KFormItem,
+            // KForm
         },
         props: {
             msg: String
