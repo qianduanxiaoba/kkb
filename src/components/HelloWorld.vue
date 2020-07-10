@@ -5,7 +5,9 @@
                 <KInput v-model="form.name"></KInput>
             </KFormItem>
             <KFormItem label="密码">
-                <KInput type="amount" v-model="form.password" ></KInput>
+                <KInput :limit="2" type="number" v-model="form.password">
+                    
+                </KInput>
             </KFormItem>
         </KForm>
     </div>
@@ -29,7 +31,8 @@
             return {
                 form: {
                     name: "",
-                    password: ""
+                    password: "",
+                    age:""
                 },
                 rules:{
                     name: [{required:true,message:"请输入用户名"}],
